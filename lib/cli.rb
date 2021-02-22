@@ -6,7 +6,8 @@ class Cli
     end
 
     def ask_for_zip
-        puts "Please enter your zip code."
+        puts "
+Please enter your zip code."
         input = gets.strip
         #call the API
     end
