@@ -1,8 +1,14 @@
 class Api
 
+    def self.get_pokemon_by_id
+        url = "https://pokeapi.co/api/v2/pokemon/1"
+        response = HTTParty.get(url)
+        binding.pry
+    end
+
 end
 
+Api.get_pokemon_by_id
 
-# http://api.fandango.com/<version>?op=<operation>&<parameter list>&apikey=<apikey>&sig=<sig>
 
-# http://api.fandango.com/v1/?op=theatersbycitystatesearch&city=San+Francisco&state=CA&apikey=edmkqs8jgkvjahu7kw3mz8yg&sig=749c8d877606b7d58d269e55b6ba41471951c97ae24c30fa9517d05a2a00e3a3
+# https://pokeapi.co/api/v2/pokemon/{id or name}/
