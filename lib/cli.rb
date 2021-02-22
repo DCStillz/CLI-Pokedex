@@ -2,6 +2,7 @@ class Cli
 
     def welcome
         puts "Welcome to my movie locator! This app will allow you to find which theaters are playing what movies within 10 miles of your zip code!"
+        self.ask_for_zip
     end
 
     def ask_for_zip
