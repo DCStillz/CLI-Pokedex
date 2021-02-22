@@ -1,3 +1,3 @@
-class API
+class Api
 
 end
