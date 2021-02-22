@@ -10,8 +10,12 @@ class Cli
 Please input a number between 1 and 898 to see that Pokemon"
         input = gets.strip
         #call the API
-        Api.get_pokemon_by_id
+        user_poke = Api.get_pokemon_by_id(input)
+        self.attribute_options(user_poke)
     end
 
+    def attribute_options(pokemon)
+        puts "Please choose whether you would like to see #{pokemon.name}'s height or weight by typing 'height' or 'weight'"
+    end
 
 end

@@ -5,9 +5,8 @@ class Model_1
     def initialize (hash)
         hash.each do |key, value|
             
-            self.send("#{key}=", value)
-        end
-    binding.pry        
+            self.send("#{key}=", value) if self.respond_to?("#{key}=")
+        end    
     end
         
 
