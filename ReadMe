@@ -1,0 +1,9 @@
+Welcome to my Pokedex application!
+
+Start by entering a Pokemon id number between 1 and 898 and the program
+will prompt you whether you want to know their height or weight!
+
+To install gems just run bundle install
+
+To run this program, type bin/run in your terminal from within the CLI Pokedex folder
+
