@@ -35,10 +35,10 @@ Please choose whether you would like to see #{pokemon.name.capitalize}'s height 
 
     def user_selection(pokemon)
         input = gets.strip
-        if input == "height"
+        if input == "height" || input == "Height"
             puts "
 #{pokemon.name.capitalize} is #{pokemon.height * 10} cm tall."
-        elsif input == "weight"
+        elsif input == "weight" || input == "Weight"
             puts "
 #{pokemon.name.capitalize} weighs #{pokemon.weight * 0.1} kgs."
         else input != "weight" && input != "height"
