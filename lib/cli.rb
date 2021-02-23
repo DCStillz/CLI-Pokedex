@@ -53,10 +53,12 @@ Would you like to see another pokemon? Enter 'yes' or 'no'"
         else
             puts "
 Please enter either 'yes' or 'no'."
+        end
     end
 
     def exit_program
-        abort("Thank you for using the pokedex! Go catch 'em all!")
+        abort("
+Thank you for using the pokedex! Go catch 'em all!")
     end
 
 end

@@ -9,7 +9,7 @@ class Model_1
             
             self.send("#{key}=", value) if self.respond_to?("#{key}=")
         end  
-        self.all
+        @@all << self
     end
 
     def self.all
