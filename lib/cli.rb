@@ -39,6 +39,24 @@ That selection was invalid"
             self.attribute_options(pokemon)
             binding.pry
         end
+        self.continue
+    end
+
+    def continue
+        puts "
+Would you like to see another pokemon? Enter 'yes' or 'no'"
+        input = gets.strip
+        if input == "yes"
+            self.ask_for_id
+        elsif input == "no"
+            self.exit_program
+        else
+            puts "
+Please enter either 'yes' or 'no'."
+    end
+
+    def exit_program
+        abort("Thank you for using the pokedex! Go catch 'em all!")
     end
 
 end
