@@ -1,6 +1,6 @@
 class Model_1
 
-    attr_accessor :name, :height, :weight
+    attr_accessor :name, :height, :weight, :id
 
     @@all = []
 
@@ -14,6 +14,12 @@ class Model_1
 
     def self.all
         @@all
+    end
+
+    def self.find_by_id(id)
+        self.all.find do |poke|
+            poke.id == id
+        end
     end
         
 

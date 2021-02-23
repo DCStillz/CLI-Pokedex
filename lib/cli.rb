@@ -6,16 +6,23 @@ class Cli
     end
 
     def ask_for_id
-        puts "
-Please input a number between 1 and 898 to see that Pokemon"
-        input = gets.strip   
-        user_poke = Api.get_pokemon_by_id(input)
-        if user_poke
-            self.attribute_options(user_poke)
-        else
+        while new_id = false
             puts "
+Please input a number between 1 and 898 to see that Pokemon"
+            input = gets.strip
+            if Model_1.find_by_id(input)
+                new_id = Model_1.find_by_id(input)
+            else
+                new_id = Api.get_pokemon_by_id(input)
+            end
+            user_poke = Api.get_pokemon_by_id(input)
+            if user_poke
+                self.attribute_options(user_poke)
+            else
+                puts "
 That number was invalid"
-            self.ask_for_id
+                self.ask_for_id
+            end
         end
     end
 

@@ -6,7 +6,7 @@ class Api
         if response["Not Found"]
             return false
         end
-        pokemon_hash = {name: response["name"], height: response["height"], weight: response["weight"]}
+        pokemon_hash = {id: id, name: response["name"], height: response["height"], weight: response["weight"]}
         Model_1.new(pokemon_hash)
     end
 
