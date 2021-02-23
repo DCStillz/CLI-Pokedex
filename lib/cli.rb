@@ -8,25 +8,34 @@ class Cli
     def ask_for_id
         puts "
 Please input a number between 1 and 898 to see that Pokemon"
-        input = gets.strip
-        #call the API
+        input = gets.strip   
         user_poke = Api.get_pokemon_by_id(input)
-        self.attribute_options(user_poke)
+        if user_poke
+            self.attribute_options(user_poke)
+        else
+            puts "
+That number was invalid"
+            self.ask_for_id
+        end
     end
 
     def attribute_options(pokemon)
-        puts "Please choose whether you would like to see #{pokemon.name}'s height or weight by typing 'height' or 'weight'"
+        puts "
+Please choose whether you would like to see #{pokemon.name}'s height or weight by typing 'height' or 'weight'"
         self.user_selection(pokemon)
     end
 
     def user_selection(pokemon)
         input = gets.strip
         if input == "height"
-            puts "#{pokemon.name} is #{pokemon.height * 10} cm tall."
+            puts "
+#{pokemon.name} is #{pokemon.height * 10} cm tall."
         elsif input == "weight"
-            puts "#{pokemon.name} weighs #{pokemon.weight * 0.1} kgs."
+            puts "
+#{pokemon.name} weighs #{pokemon.weight * 0.1} kgs."
         else input != "weight" && input != "height"
-            puts "That selection was invalid"
+            puts "
+That selection was invalid"
             self.attribute_options(pokemon)
             binding.pry
         end
