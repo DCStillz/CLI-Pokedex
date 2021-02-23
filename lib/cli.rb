@@ -60,6 +60,7 @@ Would you like to see another pokemon? Enter 'yes' or 'no'"
         else
             puts "
 Please enter either 'yes' or 'no'."
+            self.continue
         end
     end
 
