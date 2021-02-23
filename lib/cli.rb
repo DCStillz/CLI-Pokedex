@@ -29,7 +29,7 @@ That number was invalid"
 
     def attribute_options(pokemon)
         puts "
-Please choose whether you would like to see #{pokemon.name}'s height or weight by typing 'height' or 'weight'"
+Please choose whether you would like to see #{pokemon.name.capitalize}'s height or weight by typing 'height' or 'weight'"
         self.user_selection(pokemon)
     end
 
@@ -37,10 +37,10 @@ Please choose whether you would like to see #{pokemon.name}'s height or weight b
         input = gets.strip
         if input == "height"
             puts "
-#{pokemon.name} is #{pokemon.height * 10} cm tall."
+#{pokemon.name.capitalize} is #{pokemon.height * 10} cm tall."
         elsif input == "weight"
             puts "
-#{pokemon.name} weighs #{pokemon.weight * 0.1} kgs."
+#{pokemon.name.capitalize} weighs #{pokemon.weight * 0.1} kgs."
         else input != "weight" && input != "height"
             puts "
 That selection was invalid"
