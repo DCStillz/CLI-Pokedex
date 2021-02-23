@@ -45,7 +45,6 @@ Please choose whether you would like to see #{pokemon.name}'s height or weight b
             puts "
 That selection was invalid"
             self.attribute_options(pokemon)
-            binding.pry
         end
         self.continue
     end
