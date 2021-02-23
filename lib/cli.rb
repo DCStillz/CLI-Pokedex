@@ -9,7 +9,7 @@ class Cli
         new_id = false
         while !new_id 
             puts "
-Please input a number between 1 and 898 to see that Pokemon"
+Please input a number between 1 and 898 to see that Pokemon's attributes."
             input = gets.strip
             if Model_1.find_by_id(input)
                 new_id = Model_1.find_by_id(input)
