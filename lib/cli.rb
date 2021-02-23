@@ -6,7 +6,8 @@ class Cli
     end
 
     def ask_for_id
-        while new_id = false
+        new_id = false
+        while !new_id 
             puts "
 Please input a number between 1 and 898 to see that Pokemon"
             input = gets.strip
